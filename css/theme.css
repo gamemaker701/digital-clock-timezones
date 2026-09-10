@@ -1,0 +1,65 @@
+/* Dark Theme */
+body.dark-theme {
+    --primary-color: #3b82f6;
+    --primary-dark: #1e3a8a;
+    --bg-primary: #1f2937;
+    --bg-secondary: #111827;
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --border-color: #374151;
+}
+
+body.dark-theme .sidebar {
+    background: var(--bg-primary);
+}
+
+body.dark-theme .timezone-item {
+    background: var(--bg-secondary);
+}
+
+body.dark-theme .timezone-item:hover {
+    background: var(--border-color);
+}
+
+body.dark-theme .clock-card {
+    background: var(--bg-primary);
+}
+
+body.dark-theme .modal-content {
+    background: var(--bg-primary);
+}
+
+body.dark-theme .search-input {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .tab-btn {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .tab-btn:hover {
+    background: var(--border-color);
+}
+
+body.dark-theme .timezone-option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+body.dark-theme .timezone-option:hover {
+    background: var(--border-color);
+}
+
+body.dark-theme .btn {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .btn:hover {
+    background: var(--border-color);
+}

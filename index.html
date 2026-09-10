@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multi-Timezone</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">⏰ Time Zone Clock</h1>
+                <div class="header-controls">
+                    <button id="formatToggle" class="btn btn-format" title="Toggle 12/24 hour format">
+                        24H
+                    </button>
+                    <button id="themeToggle" class="btn btn-theme" title="Toggle dark/light theme">
+                        🌙
+                    </button>
+                    <button id="settingsBtn" class="btn btn-settings" title="Settings">
+                        ⚙️
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h2>Timezones</h2>
+                </div>
+                <div class="sidebar-controls">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search timezone..."
+                    >
+                    <button id="addTimezoneBtn" class="btn btn-primary btn-block">
+                        + Add Timezone
+                    </button>
+                </div>
+                <div class="sidebar-tabs">
+                    <button class="tab-btn active" data-tab="active">Active</button>
+                    <button class="tab-btn" data-tab="favorites">⭐ Favorites</button>
+                </div>
+                <div id="timezoneSidebar" class="timezone-sidebar">
+                    <!-- Timezones list will be populated here -->
+                </div>
+            </aside>
+
+            <!-- Clock Grid -->
+            <section class="clock-section">
+                <div id="clockGrid" class="clock-grid">
+                    <!-- Clock cards will be populated here -->
+                </div>
+                <div id="emptyState" class="empty-state">
+                    <p>No timezones added yet</p>
+                    <p class="empty-state-hint">Click "Add Timezone" to get started</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal: Add Timezone -->
+    <div id="timezoneModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Timezone</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input 
+                    type="text" 
+                    id="timezoneSearch" 
+                    class="search-input" 
+                    placeholder="Search timezones..."
+                >
+                <div id="timezoneList" class="timezone-list">
+                    <!-- Timezone options will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Settings -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="modal-close" id="closeSettingsModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="use24Hour" class="checkbox">
+                        Use 24-hour format
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="showSeconds" class="checkbox">
+                        Show seconds
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="showDate" class="checkbox">
+                        Show date
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="enableAnimations" class="checkbox" checked>
+                        Enable animations
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <button id="clearDataBtn" class="btn btn-danger btn-block">
+                        Clear All Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/timezone.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
